@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Refine">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/backIcon"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/baseline_arrow_back_ios_24"
+                app:title="Refine"
+                app:titleTextColor="@color/white">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/refine_header1"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/AvailabilitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="15dp">
+
+        </Spinner>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/refine_header2"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+
+        <EditText
+            android:id="@+id/statusInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:autofillHints="@string/status_text"
+            android:hint="@string/refine_header2"
+            android:inputType="text"
+            android:padding="30dp"
+            android:text="@string/status_text"
+            android:maxLength="250">
+
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/charLimit">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/refine_header3"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:max="100"
+            android:progress="1">
+
+        </SeekBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mindistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:text="@string/mindistance"
+                android:textColor="@color/blue">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="310dp"
+                android:text="@string/maxdistance"
+                android:textColor="@color/blue">
+
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/refine_header4"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+   <GridLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:columnCount="3"
+       android:layout_marginTop="6dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginBottom="10dp">
+
+       <Button
+           android:layout_marginRight="5dp"
+           android:text="@string/coffee"
+           android:textColor="@color/blue"
+           android:backgroundTint="@drawable/btn_color">
+
+       </Button>
+       <Button
+           android:layout_marginRight="5dp"
+           android:text="@string/business"
+           android:textColor="@color/blue"
+           android:backgroundTint="@drawable/btn_color">
+
+       </Button> <Button
+       android:layout_marginRight="5dp"
+       android:text="@string/Hobbies"
+       android:textColor="@color/blue"
+       android:backgroundTint="@drawable/btn_color">
+
+   </Button>
+       <Button
+           android:layout_marginRight="3dp"
+           android:text="@string/friendship"
+           android:textColor="@color/blue"
+           android:backgroundTint="@drawable/btn_color">
+
+       </Button>
+       <Button
+       android:layout_marginRight="3dp"
+       android:text="@string/Movies"
+       android:textColor="@color/blue"
+       android:backgroundTint="@drawable/btn_color">
+
+   </Button>
+       <Button
+       android:layout_marginRight="3dp"
+       android:text="@string/Dinning"
+       android:textColor="@color/blue"
+       android:backgroundTint="@drawable/btn_color">
+
+   </Button>
+       <Button
+       android:layout_marginRight="3dp"
+       android:text="@string/Dating"
+       android:textColor="@color/blue"
+           android:backgroundTint="@drawable/btn_color">
+
+   </Button>
+
+       <Button
+           android:layout_marginRight="3dp"
+           android:text="@string/Matrimony"
+           android:textColor="@color/blue"
+           android:backgroundTint="@drawable/btn_color"
+
+           />
+
+
+   </GridLayout>
+
+
+        <Button
+            android:id="@+id/btnsaveandExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:baselineAligned="false"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/button"
+            android:textAlignment="center"
+            android:backgroundTint="@color/blue"
+            >
+
+        </Button>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
